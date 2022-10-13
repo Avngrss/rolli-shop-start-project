@@ -22,6 +22,9 @@ window.addEventListener("click", function (event) {
     if (parseInt(counter.innerText) > 1) {
       //Изменяем тест в счетчике уменьшая его на 1
       counter.innerText = --counter.innerText;
+    } else if (event.target.closest(".cart-wrapper") && parseInt(counter.innerText) === 1) {
+      //Удаляем товар из корзины
+      event.target.closest(".cart-item").remove();
     }
   }
 });
