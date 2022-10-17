@@ -59,5 +59,11 @@ window.addEventListener("click", function (event) {
 
     //Сбрасываем счетчик на 1
     card.querySelector("[data-counter]").innerText = "1";
+
+    //Отображение статуса корзины Пустая / Полная
+    toggleCartStatus();
+
+    //Пересчет общей стоимости товаров в корзине
+    calcCartPriceAndDelivery();
   }
 });
